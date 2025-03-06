@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Interview Question Generator</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script>
+        async function generateQuestions(event) {
+            event.preventDefault();
+            const guestName = document.getElementById("guest_name").value;
+            const expertise = document.getElementById("expertise").value;
+            const numQuestions = document.getElementById("num_questions").value;
+            const tone = document.getElementById("tone").value;
+            
+            const formData = new FormData();
+            formData.append("guest_name", guestName);
+            formData.append("expertise", expertise);
+            formData.append("num_questions", numQuestions);
+            formData.append("tone", tone);
+
+            const response = await fetch("/generate", {
+                method: "POST",
+                body: formData
+            });
+            
+            const data = await response.json();
+            document.getElementById("output").innerText = data.generated_questions;
+        }
+    </script>
+</head>
+<body>
+    <h1>Podcast Interview Question Generator</h1>
+    <form onsubmit="generateQuestions(event)">
+        <label for="guest_name">Guest Name:</label>
+        <input type="text" id="guest_name" required><br>
+        
+        <label for="expertise">Expertise:</label>
+        <input type="text" id="expertise" required><br>
+        
+        <label for="num_questions">Number of Questions:</label>
+        <input type="number" id="num_questions" min="1" max="20" required><br>
+        
+        <label for="tone">Tone:</label>
+        <select id="tone">
+            <option value="professional">Professional</option>
+            <option value="casual">Casual</option>
+            <option value="humorous">Humorous</option>
+        </select><br>
+        
+        <button type="submit">Generate Questions</button>
+    </form>
+    
+    <h2>Generated Questions:</h2>
+    <pre id="output"></pre>
+</body>
+</html>

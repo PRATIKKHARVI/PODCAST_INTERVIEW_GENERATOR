@@ -1,0 +1,112 @@
+/* Updated styles.css for Podcast Interview Question Generator */
+
+:root {
+    --primary-color: #6A0DAD; /* Deep Purple - Represents creativity & conversation */
+    --secondary-color: #3498db; /* Vibrant Blue - Energetic & trustworthy */
+    --accent-color: #FF7F11; /* Electric Orange - Excitement & action */
+    --background-color: #F5F7FA; /* Off-White - Clean & readable */
+    --dark-background: #121212; /* Dark mode option */
+    --text-color: #2C3E50; /* Charcoal Black */
+    --light-gray: #ECECEC; /* Soft Gray for inputs & previews */
+    --border-radius: 10px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+form {
+    background: white;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    margin-top: 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-top: 25px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+pre {
+    background: var(--light-gray);
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 18px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-family: 'Roboto Mono', monospace;
+}
