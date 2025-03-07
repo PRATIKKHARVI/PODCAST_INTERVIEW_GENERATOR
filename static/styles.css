@@ -110,3 +110,56 @@ pre {
     line-height: 1.8;
     font-family: 'Roboto Mono', monospace;
 }
+header {
+    background: lightgoldenrodyellow;
+    color: darkblue;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: darkblue;
+}
+
+/* Footer styles */
+footer {
+    background: darkblue;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer img {
+    height: 50px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
